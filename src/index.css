@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  transition: all linear 500ms;
+  background-image: var(--body-background);
+  outline: none;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  --font-size:3rem;
+  --header-size:5rem;
+  --body-background:linear-gradient(to bottom, #081221,#03080f );
+  --color-card-background:#0e1a2b;
+  --color_panel_background:#0e1a2b;
+  --color_button_text:#ffffff;
+  --color_headings:#ffffff;
+  --color_labels:#ffffff;
+  --color_text:#c1d1e8;
+  --color_input_background:#182c47;
+  --color_button:#5692e8
+}

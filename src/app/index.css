@@ -1,0 +1,140 @@
+.page{
+    height: calc(100vh - 8rem);
+    padding: 4rem;
+    background-position: center;
+
+}
+
+.nav-container{
+    display: flex;
+    position: relative;
+}
+
+.nav-bg-indicators{
+    display: flex;
+    flex-direction: row;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--color_headings);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item-container{
+    position: relative;
+    width: 20rem;
+}
+
+.nav-item-container h1{
+    padding: 0;
+    margin: 0;
+    font-size: 3.5rem;
+
+}
+
+.nav-item{
+    position: absolute;
+    text-decoration: none;
+    color: var(--color_headings);
+    font-size: 1.5rem;
+    bottom: 0.05rem;
+    left: 2rem;
+    right: 0;
+    font-weight: 500;
+    width: fit-content;
+    min-width: fit-content;
+}
+
+.nav-item:hover{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+
+}
+
+
+
+
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.input-wrapper label{
+    color: white;
+}
+
+.text-input{
+    background: var(--color_input_background);
+    height: 2rem;
+    border: none;
+    margin-top: 0.6rem;
+    outline: none;
+    font-size: 16px;
+    padding: 0 0.5rem;
+    color:  var(--color_text);
+}
+
+button{
+    background: var(--color_button);
+    border: none;
+    color: white;
+    padding: 0.5rem 1.4rem;
+}
+
+.text{
+    color: var(--color_text);
+}
+
+@media screen and (min-width:360px) and (max-width:768px)
+{
+    .page{
+        padding: 2rem;
+        height: 100%;
+
+    }
+    .nav-item-container{
+        position: relative;
+        width: 15rem;
+    }
+
+    .nav-item-container h1{
+        padding: 0;
+        margin: 0;
+        font-size: 2.5rem;
+
+    }
+    .nav-item{
+        position: absolute;
+        text-decoration: none;
+        color: var(--color_headings);
+        font-size: 1.5rem;
+        bottom: 0.05rem;
+        left: 2rem;
+        right: 0;
+        font-weight: 500;
+        width: fit-content;
+        min-width: fit-content;
+    }
+}
+
+@media  screen and (min-width:200px) and (max-width:360px)
+{
+    .nav-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item-container{
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-bg-indicators{
+        display: flex;
+        flex-direction: column;
+    }
+}
