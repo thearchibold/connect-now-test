@@ -26,7 +26,7 @@ const Homepage = () => {
         setMinimumScore("0")
     };
 
-    const numberFilter =(string:string) => string.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '');
+    // const numberFilter =(string:string) => string.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '');
 
 
 
