@@ -17,7 +17,7 @@ const routes = {
     contacts:"/contacts"
 };
 
-const Navigation = (props:any) => {
+const Navigation = () => {
 
     const [currentPage, setCurrentPage] = React.useState<string>(routes.videos);
     const [videos, setVideos] = React.useState<Array<VideoType>>([]);
@@ -37,7 +37,6 @@ const Navigation = (props:any) => {
 
     React.useEffect(()=>{
         fetchVideos().then(({data}:any) =>{
-            console.log(data);
             setVideos(data)
         }).catch(err => {
             console.log(err);
@@ -49,6 +48,7 @@ const Navigation = (props:any) => {
             .finally(()=>{
             setLoading(false)
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
