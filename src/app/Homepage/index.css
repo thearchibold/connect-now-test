@@ -43,13 +43,13 @@
 }
 
 
-@media only screen and (min-width:360px) and (max-width:768px)
+@media screen and (max-width:1024px)
 {
    .home-page-container{
        flex-direction: column;
        display: grid;
        grid-template-columns: 100%;
-       height: 100vh;
+       height: 100%;
    }
 
     .videos-wrapper{
@@ -104,12 +104,14 @@
 }
 
 
-@media only screen and (min-width:200px) and (max-width:360px)
+@media screen and  (max-width:660px)
 {
 
     .home-page-container{
         display: grid;
         grid-template-columns: 100%;
+        height: 100%;
+
     }
 
     .tab-control-container{

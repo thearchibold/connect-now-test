@@ -18,8 +18,8 @@ const DropdownContainer = styled.div`
 `;
 
 const LeftArrow = styled.div`
-  height: 2rem;
-  width: 2.4rem;
+  min-height: 2rem;
+  min-width: 2rem;
   background-color: ${css.color_button};
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ const Dropdown = (props:DropdownProps) => {
             setToggle(!toggle)
         }
         document.removeEventListener("click", onClickOutsideListener)
-    }
+    };
 
 
 
@@ -98,13 +98,19 @@ const Dropdown = (props:DropdownProps) => {
            document.addEventListener("click", onClickOutsideListener)
        }}>
            <LeftArrow>
-               <i className="fas fa-arrow-up"></i>
+               <i className="fas fa-arrow-up"/>
            </LeftArrow>
 
            <DropdownList>
 
                <DropdownItemSelected  onClick={()=>{setToggle(!toggle)}}>
-                   <span>{selectedItem ? selectedItem.text : props.placeholder ? props.placeholder : "Select" }</span>
+                   <span
+                       style={{
+                           maxWidth:"8rem",
+                           overflow:"hidden",
+                           height:"1.5rem"
+                       }}
+                   >{selectedItem ? selectedItem.text : props.placeholder ? props.placeholder : "Select" }</span>
                    <span>
                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             className="bi bi-caret-down-fill" viewBox="0 0 16 16">

@@ -2,9 +2,9 @@ html, body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
   transition: all linear 500ms;
   background-image: var(--body-background);
+  background-repeat: no-repeat;
   outline: none;
 
 }

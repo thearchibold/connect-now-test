@@ -121,6 +121,10 @@ const Homepage = () => {
                         ))
                 }
 
+                <div>
+                    {videos.length === 0 && <p>No videos available</p>}
+                </div>
+
             </div>
         </div>
     )

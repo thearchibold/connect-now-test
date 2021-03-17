@@ -7,6 +7,7 @@ import css from "../constants/css"
 import {fetchVideos} from "../services/restService";
 import {VideoType} from "../constants/@types";
 import Loader from "../components/Loader"
+import {useToasts} from "react-toast-notifications"
 
 export const VideoContext = React.createContext({});
 
@@ -22,6 +23,8 @@ const Navigation = (props:any) => {
     const [videos, setVideos] = React.useState<Array<VideoType>>([]);
     const [loading, setLoading] = useState(true);
 
+    const {addToast} = useToasts()
+
 
 
     const location = useLocation();
@@ -36,7 +39,14 @@ const Navigation = (props:any) => {
         fetchVideos().then(({data}:any) =>{
             console.log(data);
             setVideos(data)
-        }).finally(()=>{
+        }).catch(err => {
+            console.log(err);
+            addToast("Error fetching videos, please try again...",{
+                autoDismiss:true,
+                appearance:"error"
+            })
+        })
+            .finally(()=>{
             setLoading(false)
         })
     }, []);
