@@ -5,7 +5,7 @@ import { act } from "react-dom/test-utils";
 import Dropdown from "../../Dropdown"
 
 
-let renderContainer:any = null;
+let renderContainer = null;
 
 
 

@@ -6,7 +6,7 @@ import { act } from "react-dom/test-utils";
 import Loader from "../../Loader"
 import Dropdown from "../../Dropdown";
 
-let container:any = null;
+let container = null;
 
 beforeEach(()=>{
     container = document.createElement("div");
