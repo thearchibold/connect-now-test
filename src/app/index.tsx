@@ -23,7 +23,7 @@ const Navigation = (props:any) => {
     const [videos, setVideos] = React.useState<Array<VideoType>>([]);
     const [loading, setLoading] = useState(true);
 
-    const {addToast} = useToasts()
+    const {addToast} = useToasts();
 
 
 
@@ -49,6 +49,7 @@ const Navigation = (props:any) => {
             .finally(()=>{
             setLoading(false)
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
