@@ -1,8 +1,9 @@
 .video-item-wrapper{
-    height: 10rem;
+    min-height: 10rem;
     display: flex;
     margin-bottom: 2rem;
     flex-direction: row;
+    height: fit-content;
 }
 
 .video-container{
